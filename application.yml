@@ -1,0 +1,27 @@
+server:
+  port: 8887
+  servlet: 
+    context-path: /
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints: 
+    web: 
+      exposure: 
+        include: '*'
+    enabled-by-default: true
+  info: 
+    git: 
+      mode: full
+  health:
+    status: 
+       http-mapping: 
+         up: 200
+         down: 400
+logging:
+  level:
+    com:
+      rd: INFO
+xpto:
+    hello-darkness
